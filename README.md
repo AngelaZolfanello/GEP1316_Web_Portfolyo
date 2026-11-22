@@ -13,3 +13,9 @@ Bu klasör, GEP1316 Kodlama Okuryazarlığı dersi için hazırlanan kişisel we
 - `images/`: Görselleri saklamak için klasör.
 
 Proje kartları ve iletişim formu şimdilik içerik/gönderim işlevi eklenmesi için taslak olarak bırakılmıştır.
+
+## Canlı Portfolyo
+
+Portfolyo sitem GitHub Pages üzerinden yayımlanmıştır.
+
+https://angelazolfanello.github.io/GEP1316_Web_Portfolyo/

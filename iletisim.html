@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a12">
+  <title>İletişim | 3D Art Portfolyo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Ana gezinme">
+      <a class="brand" href="index.html" aria-label="Portfolyo ana sayfa">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>3D ART <span class="brand-light">PORTFOLYO</span></span>
+      </a>
+      <div class="header-controls">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">
+          <span aria-hidden="true">☰</span> Menü
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Açık temaya geç">
+          <span aria-hidden="true">◐</span> <span class="theme-toggle-label">Açık tema</span>
+        </button>
+      </div>
+      <div class="nav-links" id="primary-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimda.html">Hakkımda</a>
+        <a href="projeler.html">Projeler</a>
+        <a href="iletisim.html" aria-current="page">İletişim</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="icerik" class="container page-main">
+    <section class="page-heading">
+      <p class="eyebrow">03 / İLETİŞİM</p>
+      <h1>Bir mesaj bırak<span class="heading-dot">.</span></h1>
+      <p class="page-lead">Form doğrulama örneği. Girilen bilgiler gönderilmez ve saklanmaz.</p>
+    </section>
+
+    <section class="contact-layout">
+      <div class="contact-note">
+        <span class="contact-symbol" aria-hidden="true">↗</span>
+        <h2>İletişime geç</h2>
+      </div>
+      <form class="contact-form" autocomplete="off" novalidate>
+        <div class="form-field">
+          <label for="ad">Ad</label>
+          <input id="ad" name="ad" type="text" aria-invalid="false" aria-describedby="ad-error" placeholder="Adınız">
+          <p class="form-error" id="ad-error" aria-live="polite"></p>
+        </div>
+        <div class="form-field">
+          <label for="eposta">E-posta</label>
+          <input id="eposta" name="eposta" type="email" aria-invalid="false" aria-describedby="eposta-error" placeholder="ornek@eposta.com">
+          <p class="form-error" id="eposta-error" aria-live="polite"></p>
+        </div>
+        <div class="form-field">
+          <label for="mesaj">Mesaj</label>
+          <textarea id="mesaj" name="mesaj" rows="5" aria-invalid="false" aria-describedby="mesaj-error" placeholder="Mesajınızı yazın"></textarea>
+          <p class="form-error" id="mesaj-error" aria-live="polite"></p>
+        </div>
+        <button class="button button-primary" type="submit">Doğrula <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-privacy-note">Bu form yalnızca doğrulama gösterimi içindir. Girilen bilgiler gönderilmez veya saklanmaz.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>3D ART <span class="brand-light">PORTFOLYO</span></span></a>
+      <p>GEP1316 Kodlama Okuryazarlığı</p>
+      <a class="footer-top" href="#icerik">Başa dön <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

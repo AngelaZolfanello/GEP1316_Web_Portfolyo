@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a12">
+  <title>Projeler | 3D Art Portfolyo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Ana gezinme">
+      <a class="brand" href="index.html" aria-label="Portfolyo ana sayfa">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>3D ART <span class="brand-light">PORTFOLYO</span></span>
+      </a>
+      <div class="header-controls">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">
+          <span aria-hidden="true">☰</span> Menü
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Açık temaya geç">
+          <span aria-hidden="true">◐</span> <span class="theme-toggle-label">Açık tema</span>
+        </button>
+      </div>
+      <div class="nav-links" id="primary-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimda.html">Hakkımda</a>
+        <a href="projeler.html" aria-current="page">Projeler</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="icerik" class="container page-main">
+    <section class="page-heading">
+      <p class="eyebrow">02 / SEÇKİ</p>
+      <h1>Projeler<span class="heading-dot">.</span></h1>
+      <p class="page-lead">Ders kapsamında hazırladığım projelerden iki örnek.</p>
+    </section>
+
+    <div class="project-controls">
+      <div class="project-filters" role="group" aria-label="Projeleri türe göre filtrele">
+        <button class="filter-button" type="button" data-project-filter="all" aria-pressed="true">Tümü</button>
+        <button class="filter-button" type="button" data-project-filter="python" aria-pressed="false">Python</button>
+        <button class="filter-button" type="button" data-project-filter="algorithm" aria-pressed="false">Algoritma</button>
+      </div>
+      <p class="filter-status" aria-live="polite">2 proje gösteriliyor.</p>
+    </div>
+    <section class="project-grid" aria-label="Proje kartları">
+      <article class="project-card" data-category="python">
+        <div class="project-art project-art-one project-art--with-image">
+          <img src="images/python-projesi.png" alt="3B Varlık Üretim Takipçisi uygulamasının Python kodundan bir bölüm">
+          <span class="project-count" aria-hidden="true">01</span>
+        </div>
+        <div class="project-info">
+          <p class="eyebrow">PYTHON · KOMUT SATIRI</p>
+          <h2>3B Varlık Üretim Takipçisi</h2>
+          <p class="project-description">Oyun geliştirme ekiplerinin 3D varlıklarını takip etmesi için geliştirilmiş bir Python uygulaması. Varlık ekleme ve listeleme, tamamlanma yüzdesini güncelleme, özet görüntüleme ve CSV dosyasına kaydetme özellikleri sunuyor.</p>
+          <div class="project-learning">
+            <h3>Ne öğrendim?</h3>
+            <p>Yapay zekâ desteğiyle Python'da veri yönetimi, giriş doğrulama ve test süreçlerinin nasıl çalıştığını öğrendim.</p>
+          </div>
+          <a class="project-link" href="https://github.com/AngelaZolfanello/GEP1316_Odev1_EceDonmez">GitHub deposunu görüntüle <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="project-card" data-category="algorithm">
+        <div class="project-art project-art-two project-art--with-image">
+          <img src="images/algoritma-projesi.png" alt="3D model için poligon, UV haritası ve FBX kontrollerini gösteren teknik kalite kontrol akış şeması">
+          <span class="project-count" aria-hidden="true">02</span>
+        </div>
+        <div class="project-info">
+          <p class="eyebrow">ALGORİTMA · MERMAID AKIŞ ŞEMASI</p>
+          <h2>3D Model Teknik Kalite Kontrol Algoritması</h2>
+          <p class="project-description">Bir 3D modelin poligon sayısını, UV haritasının varlığını ve FBX dosya formatını kontrol eden sözde kod ve Mermaid akış şeması çalışması. Algoritmayı Claude ile geliştirdim; akış şemasını ChatGPT ve Mermaid AI ile hazırladım.</p>
+          <div class="project-learning">
+            <h3>Ne öğrendim?</h3>
+            <p>Koşullu ifadeleri ve algoritma akışını öğrendim; yapay zekâ çıktılarındaki mantık hatalarını kontrol etmenin önemini gördüm.</p>
+          </div>
+          <p class="project-link-note">GitHub bağlantısı yakında eklenecek</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>3D ART <span class="brand-light">PORTFOLYO</span></span></a>
+      <p>GEP1316 Kodlama Okuryazarlığı</p>
+      <a class="footer-top" href="#icerik">Başa dön <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

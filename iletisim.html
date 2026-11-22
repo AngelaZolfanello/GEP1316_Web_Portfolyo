@@ -62,23 +62,26 @@
       <form class="contact-form" autocomplete="off" novalidate>
         <div class="form-field">
           <label for="ad">Ad</label>
-          <input id="ad" name="ad" type="text" aria-invalid="false" aria-describedby="ad-error" placeholder="Adınız">
+          <input id="ad" type="text" aria-invalid="false" aria-describedby="ad-error" placeholder="Adınız">
           <p class="form-error" id="ad-error" aria-live="polite"></p>
         </div>
         <div class="form-field">
           <label for="eposta">E-posta</label>
-          <input id="eposta" name="eposta" type="email" aria-invalid="false" aria-describedby="eposta-error" placeholder="ornek@eposta.com">
+          <input id="eposta" type="email" aria-invalid="false" aria-describedby="eposta-error" placeholder="ornek@eposta.com">
           <p class="form-error" id="eposta-error" aria-live="polite"></p>
         </div>
         <div class="form-field">
           <label for="mesaj">Mesaj</label>
-          <textarea id="mesaj" name="mesaj" rows="5" aria-invalid="false" aria-describedby="mesaj-error" placeholder="Mesajınızı yazın"></textarea>
+          <textarea id="mesaj" rows="5" aria-invalid="false" aria-describedby="mesaj-error" placeholder="Mesajınızı yazın"></textarea>
           <p class="form-error" id="mesaj-error" aria-live="polite"></p>
         </div>
-        <button class="button button-primary" type="submit">Doğrula <span aria-hidden="true">↗</span></button>
+        <button class="button button-primary" type="button">Doğrula <span aria-hidden="true">↗</span></button>
         <p class="form-status" role="status" aria-live="polite"></p>
         <p class="form-privacy-note">Bu form yalnızca doğrulama gösterimi içindir. Girilen bilgiler gönderilmez veya saklanmaz.</p>
       </form>
+      <noscript>
+        <p class="form-privacy-note">Form doğrulaması için JavaScript gerekir. Girilen bilgiler gönderilmez veya saklanmaz.</p>
+      </noscript>
     </section>
   </main>
 

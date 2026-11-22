@@ -137,6 +137,7 @@ const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
   const formStatus = contactForm.querySelector(".form-status");
+  const validateButton = contactForm.querySelector('button[type="button"]');
   const fields = [
     {
       input: contactForm.querySelector("#ad"),
@@ -169,11 +170,17 @@ if (contactForm) {
         formStatus.textContent = "";
       }
     });
+
+    // Enter, metin alanlarında doğrulamayı çalıştırır; mesaj alanında yeni satır ekler.
+    field.input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && field.input.tagName !== "TEXTAREA") {
+        event.preventDefault();
+        validateForm();
+      }
+    });
   });
 
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
+  function validateForm() {
     if (formStatus) {
       formStatus.textContent = "";
     }
@@ -195,7 +202,7 @@ if (contactForm) {
           " karakter olabilir.";
       } else if (
         field.input.type === "email" &&
-        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedValue)
+        !isValidEmail(trimmedValue)
       ) {
         errorMessage = "Geçerli bir e-posta adresi girin.";
       }
@@ -219,5 +226,34 @@ if (contactForm) {
     if (formStatus) {
       formStatus.textContent = "Form doğrulandı; mesaj gönderilmedi.";
     }
-  });
+  }
+
+  if (validateButton) {
+    validateButton.addEventListener("click", validateForm);
+  }
+}
+
+// E-posta adresinde yerel kısmı ve alan adı etiketlerini ayrı ayrı kontrol et.
+function isValidEmail(email) {
+  const parts = email.split("@");
+  if (parts.length !== 2) {
+    return false;
+  }
+
+  const localPart = parts[0];
+  const domainLabels = parts[1].split(".");
+  const localPartPattern =
+    /^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*$/;
+  const domainLabelPattern =
+    /^[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$/;
+
+  return (
+    email.length <= 254 &&
+    localPart.length <= 64 &&
+    localPartPattern.test(localPart) &&
+    domainLabels.length >= 2 &&
+    domainLabels.every(function (label) {
+      return label.length <= 63 && domainLabelPattern.test(label);
+    })
+  );
 }
